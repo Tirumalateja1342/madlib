@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intergalactic Expedition Mad Lib</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: linear-gradient(45deg, #000030, #000050);
+            color: #00ff7f;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 1rem;
+        }
+        .container {
+            background: rgba(0,0,50,0.8);
+            border: 2px solid #00ff7f;
+            border-radius: 15px;
+            padding: 2rem;
+            width: 100%;
+            max-width: 500px;
+        }
+        h1 {
+            text-align: center;
+            color: #00ff7f;
+            margin-bottom: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 0.5rem;
+            background-color: rgba(0,255,127,0.1);
+            border: 1px solid #00ff7f;
+            color: #00ff7f;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #00ff7f;
+            color: #000030;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .submit-btn:hover {
+            background-color: #00a050;
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #00ff7f;
+            font-size: 0.9rem;
+        }
+        .addendum {
+            margin-top: 2rem;
+            text-align: center;
+            color: #00ff7f;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Intergalactic Expedition Mad Lib! 🛸</h1>
+        <form action="/ITC505/lab-7/index.html" method="post">
+            <div class="form-group">
+                <label for="magicalCreature">Enter magical creature (plural):</label>
+                <input type="text" id="magicalCreature" name="magicalCreature" required>
+            </div>
+
+            <div class="form-group">
+                <label for="enchantedObject">Enter an enchanted object:</label>
+                <input type="text" id="enchantedObject" name="enchantedObject" required>
+            </div>
+
+            <div class="form-group">
+                <label for="heroAction">Enter a heroic action verb:</label>
+                <input type="text" id="heroAction" name="heroAction" required>
+            </div>
+
+            <div class="form-group">
+                <label for="mysteriousAdverb">Enter a mysterious adverb:</label>
+                <input type="text" id="mysteriousAdverb" name="mysteriousAdverb" required>
+            </div>
+
+            <div class="form-group">
+                <label for="legendaryLocation">Enter a legendary location:</label>
+                <input type="text" id="legendaryLocation" name="legendaryLocation" required>
+            </div>
+
+            <button type="submit" class="submit-btn">Launch My Quest! 🚀</button>
+        </form>
+    </div>
+
+    <div class="addendum">
+        <p><strong>Addendum:</strong> The information collected in this form is purely for fun and creativity. No intergalactic travel is guaranteed.</p>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Intergalactic Expeditions Inc. All rights reserved.</p>
+        <p>Last updated: <span id="lastModified"></span></p>
+    </footer>
+
+    <script>
+        // Update the "Last Updated" field in the footer
+        document.addEventListener('DOMContentLoaded', () => {
+            const lastModified = document.lastModified;
+            document.getElementById('lastModified').textContent = lastModified;
+        });
+    </script>
+</body>
+</html>
